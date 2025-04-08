@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Agriculture System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if the user is logged in
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            if (!isLoggedIn) {
+                // Redirect to login page if not logged in
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Smart Agriculture System</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#crop-price-prediction">Crop Price Prediction</a></li>
+                    <li><a href="#weather">Weather</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    
+    <section id="home">
+        <div class="container">
+            <h2>Welcome to the Future of Agriculture</h2>
+            <p>Our Smart Agriculture System helps farmers to optimize their crop yield and predict prices efficiently.</p>
+            <a href="#features" class="btn">Learn More</a>
+        </div>
+    </section>
+    
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are dedicated to providing advanced agricultural solutions to help farmers achieve their best potential.</p>
+            <div class="about-us">
+                <div class="about-item">
+                    <h3>Our Mission</h3>
+                    <p>To empower farmers with cutting-edge technology and data-driven insights to maximize their productivity and profitability.</p>
+                </div>
+                <div class="about-item">
+                    <h3>Our Vision</h3>
+                    <p>To revolutionize agriculture through innovation, sustainability, and collaboration with the farming community.</p>
+                </div>
+                <div class="about-item">
+                    <h3>Our Values</h3>
+                    <p>Integrity, Innovation, Sustainability, and Excellence in everything we do.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="features">
+        <div class="container">
+            <h2>Features</h2>
+            <ul>
+                <li><a href="#real-time-monitoring">Real-time Monitoring</a></li>
+                <li><a href="#automated-irrigation">Automated Irrigation</a></li>
+                <li><a href="#soil-health-analysis">Soil Health Analysis</a></li>
+                <li><a href="#weather-forecasting">Weather Forecasting</a></li>
+                <li><a href="#crop-price-prediction">Crop Price Prediction</a></li>
+                <li><a href="#smart-sensors">Smart Sensors</a></li>
+                <li><a href="#data-analytics">Data Analytics</a></li>
+                <li><a href="#drone-surveillance">Drone Surveillance</a></li>
+                <li><a href="#automated-pest-control">Automated Pest Control</a></li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="real-time-monitoring">
+        <div class="container">
+            <h2>Real-time Monitoring</h2>
+            <p>Monitor your crops in real-time with our advanced sensors and analytics platform.</p>
+            <div id="monitoring-data">
+                <!-- Real-time monitoring data will be displayed here -->
+            </div>
+        </div>
+    </section>
+    
+    <section id="automated-irrigation">
+        <div class="container">
+            <h2>Automated Irrigation</h2>
+            <p>Control your irrigation systems automatically based on soil moisture and weather data.</p>
+            <div id="irrigation-control">
+                <button onclick="startIrrigation()">Start Irrigation</button>
+                <button onclick="stopIrrigation()">Stop Irrigation</button>
+                <p id="irrigation-status">Irrigation is currently off.</p>
+                <img src="https://via.placeholder.com/600x400?text=Automated+Irrigation" alt="Automated Irrigation" class="section-image">
+            </div>
+        </div>
+    </section>
+    
+    <section id="soil-health-analysis">
+        <div class="container">
+            <h2>Soil Health Analysis</h2>
+            <p>Analyze the health of your soil with our advanced testing and analytics tools.</p>
+            <div id="soil-health-data">
+                <!-- Soil health data will be displayed here -->
+                <img src="https://via.placeholder.com/600x400?text=Soil+Health+Analysis" alt="Soil Health Analysis" class="section-image">
+            </div>
+        </div>
+    </section>
+    
+    <section id="weather-forecasting">
+        <div class="container">
+            <h2>Weather Forecasting</h2>
+            <p>Get the latest weather updates to make informed decisions about your crops.</p>
+            <div class="weather-widget">
+                <p>Loading weather information...</p>
+            </div>
+            <h3>Weather Prediction</h3>
+            <form id="weather-prediction-form">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+                
+                <label for="state">State:</label>
+                <input list="states" id="weather-state" name="state" required>
+                <datalist id="states">
+                    <option value="Andhra Pradesh">
+                    <option value="Arunachal Pradesh">
+                    <option value="Assam">
+                    <option value="Bihar">
+                    <option value="Chhattisgarh">
+                    <option value="Goa">
+                    <option value="Gujarat">
+                    <option value="Haryana">
+                    <option value="Himachal Pradesh">
+                    <option value="Jharkhand">
+                    <option value="Karnataka">
+                    <option value="Kerala">
+                    <option value="Madhya Pradesh">
+                    <option value="Maharashtra">
+                    <option value="Manipur">
+                    <option value="Meghalaya">
+                    <option value="Mizoram">
+                    <option value="Nagaland">
+                    <option value="Odisha">
+                    <option value="Punjab">
+                    <option value="Rajasthan">
+                    <option value="Sikkim">
+                    <option value="Tamil Nadu">
+                    <option value="Telangana">
+                    <option value="Tripura">
+                    <option value="Uttar Pradesh">
+                    <option value="Uttarakhand">
+                    <option value="West Bengal">
+                </datalist>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="weather-date" name="date" required>
+                
+                <label for="year">Year:</label>
+                <select id="weather-year" name="year" required>
+                    <option value="" disabled selected>Select Year</option>
+                    <script>
+                        for (let year = 2000; year <= 2030; year++) {
+                            document.write(`<option value="${year}">${year}</option>`);
+                        }
+                    </script>
+                </select>
+                
+                <input type="submit" value="Predict Weather">
+            </form>
+            <div id="weather-prediction-result">
+                <p>Predicted weather information will be displayed here.</p>
+                <img src="https://via.placeholder.com/600x400?text=Weather+Forecast" alt="Weather Forecast" class="section-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="crop-price-prediction">
+        <div class="container">
+            <h2>Crop Price Prediction</h2>
+            <p>Predict crop prices with our advanced machine learning algorithms. Enter the details below to get started.</p>
+            <form id="prediction-form">
+                <label for="crop">Crop Name:</label>
+                <input list="crops" id="crop" name="crop" required>
+                <datalist id="crops">
+                    <option value="Wheat">
+                    <option value="Rice">
+                    <option value="Maize">
+                    <option value="Soybean">
+                    <option value="Cotton">
+                </datalist>
+                
+                <label for="area">Area (in acres):</label>
+                <input type="number" id="area" name="area" required>
+                
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="state">State:</label>
+                <input list="states" id="state" name="state" required>
+                <datalist id="states">
+                    <option value="Andhra Pradesh">
+                    <option value="Arunachal Pradesh">
+                    <option value="Assam">
+                    <option value="Bihar">
+                    <option value="Chhattisgarh">
+                    <option value="Goa">
+                    <option value="Gujarat">
+                    <option value="Haryana">
+                    <option value="Himachal Pradesh">
+                    <option value="Jharkhand">
+                    <option value="Karnataka">
+                    <option value="Kerala">
+                    <option value="Madhya Pradesh">
+                    <option value="Maharashtra">
+                    <option value="Manipur">
+                    <option value="Meghalaya">
+                    <option value="Mizoram">
+                    <option value="Nagaland">
+                    <option value="Odisha">
+                    <option value="Punjab">
+                    <option value="Rajasthan">
+                    <option value="Sikkim">
+                    <option value="Tamil Nadu">
+                    <option value="Telangana">
+                    <option value="Tripura">
+                    <option value="Uttar Pradesh">
+                    <option value="Uttarakhand">
+                    <option value="West Bengal">
+                </datalist>
+                
+                <label for="year">Year:</label>
+                <select id="year" name="year" required>
+                    <option value="" disabled selected>Select Year</option>
+                    <script>
+                        for (let year = 2000; year <= 2030; year++) {
+                            document.write(`<option value="${year}">${year}</option>`);
+                        }
+                    </script>
+                </select>
+
+                <input type="submit" value="Predict Price">
+            </form>
+            <div id="prediction-result">
+                <p>Predicted price for the selected crop will be displayed here.</p>
+                <img src="https://via.placeholder.com/600x400?text=Crop+Price+Prediction" alt="Crop Price Prediction" class="section-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="smart-sensors">
+        <div class="container">
+            <h2>Smart Sensors</h2>
+            <p>Deploy smart sensors to monitor environmental conditions and crop health.</p>
+            <div id="sensor-data">
+                <!-- Smart sensor data will be displayed here -->
+                <img src="https://via.placeholder.com/600x400?text=Smart+Sensors" alt="Smart Sensors" class="section-image">
+            </div>
+        </div>
+    </section>
+    
+    <section id="data-analytics">
+        <div class="container">
+            <h2>Data Analytics</h2>
+            <p>Leverage data analytics to gain insights and improve your farming practices.</p>
+            <div id="analytics-data">
+                <!-- Data analytics will be displayed here -->
+                <img src="https://via.placeholder.com/600x400?text=Data+Analytics" alt="Data Analytics" class="section-image">
+            </div>
+        </div>
+    </section>
+    
+    <section id="drone-surveillance">
+        <div class="container">
+            <h2>Drone Surveillance</h2>
+            <p>Use drones to monitor your fields and gather valuable data.</p>
+            <button class="btn" onclick="startDroneSurveillance()">Start Drone Surveillance</button>
+            <button class="btn" onclick="stopDroneSurveillance()">Stop Drone Surveillance</button>
+            <p id="drone-status">Drone surveillance is currently off.</p>
+            <img src="https://via.placeholder.com/600x400?text=Drone+Surveillance" alt="Drone Surveillance" class="section-image">
+        </div>
+    </section>
+    
+    <section id="automated-pest-control">
+        <div class="container">
+            <h2>Automated Pest Control</h2>
+            <p>Implement automated pest control measures to protect your crops.</p>
+            <button class="btn" onclick="activatePestControl()">Activate Pest Control</button>
+            <button class="btn" onclick="deactivatePestControl()">Deactivate Pest Control</button>
+            <p id="pest-control-status">Pest control is currently inactive.</p>
+            <img src="https://via.placeholder.com/600x400?text=Automated+Pest+Control" alt="Automated Pest Control" class="section-image">
+        </div>
+    </section>
+    
+    <section id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Images will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+    
+    <section id="community">
+        <div class="container">
+            <h2>Community Forum</h2>
+            <p>Join our community forum to ask questions, share knowledge, and connect with other farmers.</p>
+            <div class="forum-placeholder">
+                <img src="https://via.placeholder.com/600x400?text=Community+Forum" alt="Community Forum" class="section-image">
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need further information, feel free to contact us.</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Smart Agriculture System. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

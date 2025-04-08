@@ -1,0 +1,1584 @@
+/* Enhanced Animations and Design for Smart Agriculture */
+/* To be added to your existing styles.css */
+
+:root {
+  /* Agriculture-themed color palette */
+  --leaf-green: #4caf50;
+  --earth-brown: #795548;
+  --wheat-gold: #f9c74f;
+  --sky-blue: #90caf9;
+  --fresh-water: #2196f3;
+  --sunset-orange: #ff7043;
+  --forest-green: #2e7d32;
+  --soil-dark: #5d4037;
+}
+
+/* Base styles enhancement */
+body {
+  background-color: #f9f9f9;
+  background-image: linear-gradient(120deg, rgba(240, 255, 240, 0.7) 0%, rgba(245, 255, 250, 0.7) 100%);
+  font-family: 'Poppins', sans-serif;
+}
+/* Base styles enhancement */
+body {
+  background-color: #f9f9f9;
+  background-image: linear-gradient(120deg, rgba(240, 255, 240, 0.7) 0%, rgba(245, 255, 250, 0.7) 100%);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Image handling styles */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.result-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+// ... rest of the existing code ...
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header CSS-based field pattern */
+header {
+  animation: fadeInDown 0.5s ease-in-out;
+  background-color: var(--forest-green);
+  background-image: 
+    linear-gradient(45deg, rgba(46, 125, 50, 0.9), rgba(46, 125, 50, 0.95)),
+    repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 255, 255, 0.05) 10px, rgba(255, 255, 255, 0.05) 20px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navigation hover effects */
+header a {
+  position: relative;
+  transition: all 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+header a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--wheat-gold);
+  transition: width 0.3s ease;
+}
+
+header a:hover:after {
+  width: 100%;
+}
+
+/* Container style */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Button animations */
+.btn, button, input[type="submit"] {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: var(--leaf-green);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn:before, button:before, input[type="submit"]:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.btn:hover:before, button:hover:before, input[type="submit"]:hover:before {
+  width: 100%;
+}
+
+.btn:hover, button:hover, input[type="submit"]:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Section styles and entrance animations */
+section {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  padding: 60px 0;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, var(--leaf-green), var(--wheat-gold));
+}
+
+section.visible {
+  opacity: 1;
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+/* Section title styling */
+section h2 {
+  color: var(--forest-green);
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--leaf-green), var(--wheat-gold));
+}
+
+/* CSS-based agricultural imagery and patterns */
+#home {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+    repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(76, 175, 80, 0.05) 20px, rgba(76, 175, 80, 0.05) 40px),
+    radial-gradient(circle at right bottom, rgba(249, 199, 79, 0.3), transparent 400px);
+}
+
+#about {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95)),
+    radial-gradient(circle at left top, rgba(144, 202, 249, 0.2), transparent 400px);
+}
+
+/* About section styling */
+.about-us {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-item {
+  flex: 1;
+  min-width: 300px;
+  padding: 25px;
+  background-color: white;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--leaf-green);
+}
+
+.about-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-item h3 {
+  color: var(--forest-green);
+  margin-top: 0;
+}
+
+/* Feature list styling */
+#features {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)),
+    repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(76, 175, 80, 0.03) 20px, rgba(76, 175, 80, 0.03) 40px);
+}
+
+#features ul {
+  list-style-type: none;
+  padding-left: 5px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+#features li {
+  opacity: 0;
+  transition: all 0.3s ease;
+  padding: 15px;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: relative;
+  padding-left: 35px;
+}
+
+#features li::before {
+  content: '🌱';
+  position: absolute;
+  left: 10px;
+  font-size: 18px;
+}
+
+#features li.visible {
+  animation: slideInRight 0.4s ease-in-out forwards;
+}
+
+#features li a {
+  color: var(--forest-green);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#features li a:hover {
+  color: var(--leaf-green);
+  padding-left: 5px;
+}
+
+/* CSS-based imagery for sections */
+#real-time-monitoring {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95)),
+    radial-gradient(circle at center right, rgba(144, 202, 249, 0.3), transparent 500px);
+}
+
+#real-time-monitoring::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: 
+    radial-gradient(circle at center, rgba(76, 175, 80, 0.2) 0%, rgba(76, 175, 80, 0.2) 30%, transparent 30.5%),
+    repeating-radial-gradient(circle at center, rgba(76, 175, 80, 0.2) 0%, rgba(76, 175, 80, 0.2) 7%, transparent 7.5%, transparent 10%),
+    white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#automated-irrigation {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95)),
+    linear-gradient(135deg, rgba(33, 150, 243, 0.2) 0%, transparent 50%);
+}
+
+#automated-irrigation::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 40px;
+  background: 
+    radial-gradient(circle at 20px 20px, var(--fresh-water) 0, var(--fresh-water) 5px, transparent 5px),
+    radial-gradient(circle at 40px 20px, var(--fresh-water) 0, var(--fresh-water) 5px, transparent 5px),
+    radial-gradient(circle at 60px 20px, var(--fresh-water) 0, var(--fresh-water) 5px, transparent 5px);
+}
+
+#soil-health-analysis {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95)),
+    linear-gradient(45deg, rgba(121, 85, 72, 0.2) 0%, transparent 70%);
+}
+
+#soil-health-analysis::after {
+  content: '';
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  width: 60px;
+  height: 20px;
+  background: linear-gradient(0deg, var(--soil-dark) 0%, var(--earth-brown) 50%, var(--wheat-gold) 100%);
+  border-radius: 3px;
+}
+
+#weather-forecasting {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+    linear-gradient(to bottom, rgba(144, 202, 249, 0.3) 0%, transparent 100%);
+}
+
+#weather-forecasting::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  width: 50px;
+  height: 30px;
+  background: 
+    radial-gradient(circle at 15px 15px, white 0, white 10px, transparent 10px),
+    radial-gradient(circle at 35px 15px, white 0, white 8px, transparent 8px),
+    var(--sky-blue);
+  border-radius: 15px;
+}
+
+#crop-price-prediction {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95)),
+    linear-gradient(135deg, rgba(249, 199, 79, 0.2) 0%, transparent 70%);
+}
+
+#crop-price-prediction::after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  background: 
+    linear-gradient(45deg, transparent 0%, transparent 40%, var(--wheat-gold) 40%, var(--wheat-gold) 60%, transparent 60%, transparent 100%),
+    linear-gradient(-45deg, transparent 0%, transparent 40%, var(--wheat-gold) 40%, var(--wheat-gold) 60%, transparent 60%, transparent 100%);
+}
+
+#smart-sensors {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95)),
+    radial-gradient(circle at left center, rgba(76, 175, 80, 0.2), transparent 400px);
+}
+
+#smart-sensors::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  background:
+    linear-gradient(90deg, transparent 47%, var(--leaf-green) 47%, var(--leaf-green) 53%, transparent 53%),
+    linear-gradient(0deg, transparent 47%, var(--leaf-green) 47%, var(--leaf-green) 53%, transparent 53%),
+    radial-gradient(circle at center, var(--forest-green) 0, var(--forest-green) 8px, transparent 8px);
+  border-radius: 50%;
+  border: 2px solid var(--forest-green);
+}
+
+#data-analytics {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95)),
+    linear-gradient(45deg, rgba(33, 150, 243, 0.2) 0%, transparent 70%);
+}
+
+#data-analytics::after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 60px;
+  height: 40px;
+  background: 
+    linear-gradient(0deg, var(--leaf-green) 0%, var(--leaf-green) 30%, transparent 30%),
+    linear-gradient(0deg, var(--wheat-gold) 0%, var(--wheat-gold) 60%, transparent 60%),
+    linear-gradient(0deg, var(--sky-blue) 0%, var(--sky-blue) 90%, transparent 90%);
+  background-position: 10px 0, 25px 0, 40px 0;
+  background-size: 10px 40px, 10px 40px, 10px 40px;
+  background-repeat: no-repeat;
+}
+
+#drone-surveillance {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95)),
+    radial-gradient(circle at right center, rgba(158, 158, 158, 0.2), transparent 400px);
+}
+
+#drone-surveillance::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  width: 50px;
+  height: 15px;
+  background: #757575;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#drone-surveillance::before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  right: 65px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 12px solid #757575;
+}
+
+#automated-pest-control {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95)),
+    linear-gradient(135deg, rgba(255, 112, 67, 0.2) 0%, transparent 70%);
+}
+
+#automated-pest-control::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  width: 50px;
+  height: 30px;
+  background: 
+    radial-gradient(circle at 12px 15px, transparent 0, transparent 4px, var(--sunset-orange) 4px, var(--sunset-orange) 6px, transparent 6px),
+    radial-gradient(circle at 24px 15px, transparent 0, transparent 4px, var(--sunset-orange) 4px, var(--sunset-orange) 6px, transparent 6px),
+    radial-gradient(circle at 36px 15px, transparent 0, transparent 4px, var(--sunset-orange) 4px, var(--sunset-orange) 6px, transparent 6px);
+}
+
+/* Form styling */
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--forest-green);
+  font-weight: 500;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--leaf-green);
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+  outline: none;
+}
+
+/* Form field with icons */
+form label {
+  position: relative;
+}
+
+form label[for="crop"]::before {
+  content: '🌾';
+  position: absolute;
+  right: -25px;
+}
+
+form label[for="area"]::before {
+  content: '📏';
+  position: absolute;
+  right: -25px;
+}
+
+form label[for="date"], form label[for="weather-date"]::before {
+  content: '📅';
+  position: absolute;
+  right: -25px;
+}
+
+form label[for="location"]::before {
+  content: '📍';
+  position: absolute;
+  right: -25px;
+}
+
+/* Gallery styling */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.gallery-item {
+  transition: all 0.4s ease;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  height: 200px;
+  position: relative;
+  /* Agriculture CSS pattern background as fallback */
+  background: 
+    repeating-linear-gradient(45deg, rgba(76, 175, 80, 0.1), rgba(76, 175, 80, 0.1) 10px, rgba(76, 175, 80, 0.05) 10px, rgba(76, 175, 80, 0.05) 20px);
+}
+
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover::before {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Create CSS-based gallery placeholders with agriculture themes */
+.gallery-item:nth-child(1) {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+              linear-gradient(135deg, var(--forest-green), var(--leaf-green));
+}
+
+.gallery-item:nth-child(1)::after {
+  content: '🚜 Smart Farming';
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item:nth-child(2) {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+              linear-gradient(135deg, var(--wheat-gold), #ffd54f);
+}
+
+.gallery-item:nth-child(2)::after {
+  content: '📊 Crop Analysis';
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item:nth-child(3) {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+              linear-gradient(135deg, var(--sky-blue), #64b5f6);
+}
+
+.gallery-item:nth-child(3)::after {
+  content: '📡 IoT Sensors';
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item:nth-child(4) {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+              linear-gradient(135deg, #616161, #9e9e9e);
+}
+
+.gallery-item:nth-child(4)::after {
+  content: '🛸 Drone Monitoring';
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item:nth-child(5) {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+              linear-gradient(135deg, var(--earth-brown), #8d6e63);
+}
+
+.gallery-item:nth-child(5)::after {
+  content: '⚙️ Automated Systems';
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-item:nth-child(6) {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+              linear-gradient(135deg, var(--fresh-water), #42a5f5);
+}
+
+.gallery-item:nth-child(6)::after {
+  content: '📈 Data Visualizations';
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Result card styling */
+.result-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--forest-green);
+}
+
+.result-card h3 {
+  color: var(--forest-green);
+  margin-top: 0;
+  text-align: center;
+  position: relative;
+}
+
+.result-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: var(--leaf-green);
+}
+
+.result-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.result-details {
+  flex: 1;
+  min-width: 300px;
+}
+
+.result-image {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  /* Replace image with CSS */
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+              linear-gradient(135deg, var(--forest-green), var(--leaf-green));
+  height: 200px;
+  position: relative;
+}
+
+.result-image::after {
+  content: '🌾 Crop Visualization';
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced loading animation */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(76, 175, 80, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--leaf-green);
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Dark mode styling */
+.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+.dark-mode section {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .about-item,
+.dark-mode form,
+.dark-mode .result-card {
+  background-color: #2d2d2d;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode-toggle {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background: #333;
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background: #555;
+  transform: scale(1.05);
+}
+
+/* Weather widget with CSS graphics */
+.weather-widget {
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #64b5f6, #90caf9);
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-widget::before {
+  content: '☀️';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+}
+
+.weather-widget:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* CSS-based ripple effect animation for buttons */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Toast notifications */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background-color: #323232;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* Login and signup buttons */
+header nav ul li:nth-last-child(1) a,
+header nav ul li:nth-last-child(2) a {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  header nav ul li:nth-last-child(1) a,
+header nav ul li:nth-last-child(2) a {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+header nav ul li:nth-last-child(1) a:hover,
+header nav ul li:nth-last-child(2) a:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Footer styling with farm landscape silhouette */
+footer {
+  background-color: var(--forest-green);
+  color: white;
+  padding: 40px 0 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-image: 
+    linear-gradient(transparent 0%, rgba(0,0,0,0.1) 100%),
+    linear-gradient(to right,
+      transparent 0%, transparent 5%,
+      var(--earth-brown) 5%, var(--earth-brown) 10%, 
+      transparent 10%, transparent 15%,
+      var(--earth-brown) 15%, var(--earth-brown) 30%,
+      transparent 30%, transparent 35%,
+      var(--earth-brown) 35%, var(--earth-brown) 60%,
+      transparent 60%, transparent 65%,
+      var(--earth-brown) 65%, var(--earth-brown) 80%,
+      transparent 80%, transparent 100%
+    );
+  opacity: 0.6;
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+footer h4 {
+  color: var(--wheat-gold);
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+footer h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--wheat-gold);
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--wheat-gold);
+  padding-left: 5px;
+}
+
+/* Social media icons with farm-related emoji */
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.social-icon:hover {
+  background-color: var(--wheat-gold);
+  transform: translateY(-3px);
+}
+
+.social-icon::before {
+  font-size: 20px;
+}
+
+.social-icon.facebook::before { content: '🌾'; }
+.social-icon.twitter::before { content: '🚜'; }
+.social-icon.instagram::before { content: '🌱'; }
+.social-icon.linkedin::before { content: '📊'; }
+
+/* Agricultural dashboard elements */
+.dashboard-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--leaf-green), var(--forest-green));
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.dashboard-card h3 {
+  color: var(--forest-green);
+  margin-top: 0;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.dashboard-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--leaf-green);
+}
+
+/* Farm field visualization with CSS */
+.farm-visualization {
+  height: 200px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.field {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(
+    to bottom,
+    var(--wheat-gold) 0%,
+    var(--wheat-gold) 10%,
+    var(--leaf-green) 10%,
+    var(--leaf-green) 20%,
+    var(--wheat-gold) 20%,
+    var(--wheat-gold) 30%,
+    var(--leaf-green) 30%,
+    var(--leaf-green) 40%,
+    var(--wheat-gold) 40%,
+    var(--wheat-gold) 50%,
+    var(--leaf-green) 50%,
+    var(--leaf-green) 60%,
+    var(--wheat-gold) 60%,
+    var(--wheat-gold) 70%,
+    var(--leaf-green) 70%,
+    var(--leaf-green) 80%,
+    var(--wheat-gold) 80%,
+    var(--wheat-gold) 90%,
+    var(--leaf-green) 90%,
+    var(--leaf-green) 100%
+  );
+  background-size: 100% 100px;
+}
+
+.sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to bottom, var(--sky-blue), #b3e5fc);
+}
+
+.sun {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--wheat-gold);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(249, 199, 79, 0.7);
+}
+
+.cloud {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+.cloud-1 {
+  width: 50px;
+  height: 20px;
+  top: 20px;
+  left: 20%;
+  animation: float 30s linear infinite;
+}
+
+.cloud-2 {
+  width: 70px;
+  height: 25px;
+  top: 30px;
+  left: 60%;
+  animation: float 40s linear infinite;
+}
+
+.tractor {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  width: 40px;
+  height: 20px;
+  background-color: var(--earth-brown);
+  border-radius: 5px;
+  animation: drive 15s linear infinite;
+}
+
+.tractor::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 5px;
+  width: 15px;
+  height: 10px;
+  background-color: var(--earth-brown);
+  border-radius: 3px;
+}
+
+.tractor::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #424242;
+  border-radius: 50%;
+  box-shadow: 20px 0 0 #424242;
+}
+
+@keyframes float {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(100vw)); }
+}
+
+@keyframes drive {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(100% - 40px)); }
+}
+
+/* Crop growth indicators */
+.growth-indicator {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.growth-stage {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.growth-stage::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.stage-seed::before {
+  content: '🌱';
+  font-size: 20px;
+}
+
+.stage-sprout::before {
+  content: '🌿';
+  font-size: 20px;
+}
+
+.stage-grow::before {
+  content: '🌾';
+  font-size: 20px;
+}
+
+.stage-harvest::before {
+  content: '🌽';
+  font-size: 20px;
+}
+
+/* Soil moisture indicator */
+.moisture-indicator {
+  height: 30px;
+  border-radius: 15px;
+  background-color: #e0e0e0;
+  overflow: hidden;
+  margin: 20px 0;
+  position: relative;
+}
+
+.moisture-level {
+  height: 100%;
+  background: linear-gradient(to right, #64b5f6, var(--fresh-water));
+  border-radius: 15px;
+  transition: width 0.5s ease;
+}
+
+.moisture-indicator::after {
+  content: '💧';
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+/* Smart irrigation visualization */
+.irrigation-system {
+  height: 150px;
+  position: relative;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 30px 0;
+}
+
+.soil-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to bottom, #a1887f, var(--earth-brown));
+}
+
+.sprinkler {
+  position: absolute;
+  top: 30px;
+  width: 5px;
+  height: 20px;
+  background-color: #757575;
+}
+
+.sprinkler::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 5px;
+  background-color: #757575;
+  border-radius: 5px;
+}
+
+.sprinkler-1 { left: 20%; }
+.sprinkler-2 { left: 50%; }
+.sprinkler-3 { left: 80%; }
+
+.water-drop {
+  position: absolute;
+  width: 6px;
+  height: 10px;
+  background-color: var(--fresh-water);
+  border-radius: 50% 50% 0 50%;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+/* Create water drops animation */
+@keyframes waterDrop {
+  0% { 
+    transform: translateY(0) rotate(45deg);
+    opacity: 0;
+  }
+  20% { 
+    opacity: 0.8;
+  }
+  100% { 
+    transform: translateY(40px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* Season-specific styling */
+.season-spring {
+  --seasonal-color: #8bc34a;
+  --seasonal-bg: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+                  linear-gradient(135deg, rgba(139, 195, 74, 0.2), transparent 70%);
+}
+
+.season-summer {
+  --seasonal-color: #ffa000;
+  --seasonal-bg: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+                 linear-gradient(135deg, rgba(255, 160, 0, 0.2), transparent 70%);
+}
+
+.season-fall {
+  --seasonal-color: #ef6c00;
+  --seasonal-bg: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+                linear-gradient(135deg, rgba(239, 108, 0, 0.2), transparent 70%);
+}
+
+.season-winter {
+  --seasonal-color: #78909c;
+  --seasonal-bg: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+                linear-gradient(135deg, rgba(120, 144, 156, 0.2), transparent 70%);
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 768px) {
+  section {
+    padding: 40px 20px;
+  }
+  
+  .about-us, .result-content {
+    flex-direction: column;
+  }
+  
+  header nav {
+    padding: 10px;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  footer .container {
+    grid-template-columns: 1fr;
+  }
+  
+  .farm-visualization {
+    height: 150px;
+  }
+}
+
+/* Print styles for reports */
+@media print {
+  header, footer, nav, button, .gallery-grid {
+    display: none;
+  }
+  
+  body, section {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+  
+  .result-card {
+    page-break-inside: avoid;
+    border: 1px solid #ddd;
+  }
+}
+
+/* Farm weather icons using CSS */
+.weather-icon {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  margin: 20px auto;
+}
+
+.weather-sunny {
+  background: radial-gradient(circle, var(--wheat-gold) 30%, transparent 30%);
+}
+
+.weather-sunny::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(0deg, transparent 43%, var(--wheat-gold) 43%, var(--wheat-gold) 57%, transparent 57%),
+    linear-gradient(45deg, transparent 43%, var(--wheat-gold) 43%, var(--wheat-gold) 57%, transparent 57%),
+    linear-gradient(90deg, transparent 43%, var(--wheat-gold) 43%, var(--wheat-gold) 57%, transparent 57%),
+    linear-gradient(135deg, transparent 43%, var(--wheat-gold) 43%, var(--wheat-gold) 57%, transparent 57%);
+}
+
+.weather-cloudy {
+  background: 
+    radial-gradient(circle at 30% 60%, white 25%, transparent 25%),
+    radial-gradient(circle at 70% 60%, white 25%, transparent 25%),
+    radial-gradient(circle at 50% 40%, white 25%, transparent 25%),
+    linear-gradient(white 50%, transparent 50%);
+}
+
+.weather-rainy {
+  background: 
+    radial-gradient(circle at 50% 30%, #90a4ae 30%, transparent 30%);
+}
+
+.weather-rainy::after {
+  content: '';
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  width: 50%;
+  height: 40%;
+  background: 
+    linear-gradient(to bottom, transparent 20%, var(--fresh-water) 20%, var(--fresh-water) 40%, transparent 40%),
+    linear-gradient(to bottom, transparent 60%, var(--fresh-water) 60%, var(--fresh-water) 80%, transparent 80%);
+  background-position: 0 0, 10px 0;
+  background-size: 5px 20px;
+  background-repeat: repeat-x;
+  transform: rotate(15deg);
+}
+
+/* Enhanced animations for sections */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Agricultural timeline styling */
+.farm-timeline {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 30px;
+}
+
+.farm-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--leaf-green), var(--forest-green));
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--leaf-green);
+  border: 3px solid white;
+}
+
+.timeline-item:nth-child(2n)::before {
+  background-color: var(--wheat-gold);
+}
+
+.timeline-item:nth-child(3n)::before {
+  background-color: var(--fresh-water);
+}
+
+/* Analytics charts with pure CSS */
+.css-chart {
+  height: 200px;
+  margin: 20px 0;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.chart-bar {
+  width: 40px;
+  background: linear-gradient(to top, var(--leaf-green), var(--forest-green));
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  transition: height 0.5s ease;
+}
+
+.chart-bar::after {
+  content: attr(data-value);
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #555;
+}
+
+.chart-bar:nth-child(2n) {
+  background: linear-gradient(to top, var(--wheat-gold), #ffd54f);
+}
+
+.chart-bar:nth-child(3n) {
+  background: linear-gradient(to top, var(--fresh-water), #64b5f6);
+}
+
+/* Loading animation with tractor */
+.tractor-loader {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  margin: 20px 0;
+}
+
+.tractor-path {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+.loader-tractor {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 30px;
+  height: 20px;
+  background-color: var(--earth-brown);
+  border-radius: 3px;
+  animation: tractorDrive 3s linear infinite;
+}
+
+.loader-tractor::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: 3px;
+  width: 12px;
+  height: 8px;
+  background-color: var(--earth-brown);
+  border-radius: 2px;
+}
+
+.loader-tractor::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  background-color: #424242;
+  border-radius: 50%;
+  box-shadow: 12px 0 0 #424242;
+}
+
+@keyframes tractorDrive {
+  0% { transform: translateX(0); }
+  45% { transform: translateX(calc(100% - 30px)); }
+  50% { transform: translateX(calc(100% - 30px)) scaleX(-1); }
+  95% { transform: translateX(0) scaleX(-1); }
+  100% { transform: translateX(0); }
+}
